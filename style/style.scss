@@ -1,0 +1,25 @@
+@import "setup";
+@import "form";
+
+body {
+  margin: 0 auto;
+  max-width: 80%;
+}
+header {
+  h1,
+  p {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+h2, 
+h1,
+h3 {
+  font-family: 'Playfair Display', serif;
+  // max-width: 500px;
+}
+
+.twitter-share-button {
+  text-align: center;
+  display: inline;
+}

@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Find your Summertime Anthem - By Mikaela</title>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
   <!-- Font Awesome linked -->
   <script defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin='anonymous'></script>
   <!-- Jquery -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
 
   <!-- stylesheet linked -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
   
 </head>
 <body>
@@ -22,131 +24,137 @@
   <main>
     <form action="#" class="userInput" id="userInput">
       <!-- INTRODUCTION  -->
-       <p>Whether you’re the captain of summer fun or you need a bit more motivation in the summer, don’t worry, I’m here to help! Answer a few questions to get your very own fresh new summertime theme song.</p>
-      <p>Are you ready?</p>
-      <input type="submit" value="Start the quiz!" name="start" id="start">
-      
+       <div class="introduction">
+         <p>Whether you’re the captain of summer fun or you need a bit more motivation in the summer, don’t worry, I’m here to help! Answer a few questions to get your very own fresh new summertime theme song.</p>
+        <p>Are you ready?</p>
+        <button>Start the quiz</button>
+       </div>
+      <!-- <input type="submit" value="Start the quiz!" name="start" id="start"> -->
       <!-- QUESTION ONE -->
       <h2>What is your mood when you think about summer?</h2>
-      <div class="question1">
+      <div class="question1 question">
         <div>
-          <input type="radio" name="question1" id="excited" value="excited">
+          <input type="radio" name="question1" id="excited" value="excited" >
           <label for="excited">So excited!</label>
         </div>
         <div>
-          <input type="radio" name="question1" id="happy" value="happy">
+          <input type="radio" name="question1" id="happy" value="happy" >
           <label for="happy">Just happy, I don’t really like being hot and sweaty</label>
         </div>
         <div>
-          <input type="radio" name="question1" id="okay" value="okay">
+          <input type="radio" name="question1" id="okay" value="okay" >
           <label for="okay">It doesn't matter, it’s just another season</label>
         </div>
         <div>
-          <input type="radio" name="question1" id="sad" value="sad">
+          <input type="radio" name="question1" id="sad" value="sad" >
           <label for="sad">Whatever, I stay inside most of the time anyway</label>
         </div>
         <div>
-          <input type="radio" name="question1" id="verySad" value="verySad">
+          <input type="radio" name="question1" id="verySad" value="verySad" >
           <label for="verySad">Depressed, I like snow</label>
         </div>
-
-        <input type="submit" value="Next" name="submit" id="submit">
+        
+        <button>Next Question</button>
+        <!-- <input type="" value="Next" name="submit" id="submit"> -->
       </div>
       <!-- QUESTION2 -->
-      <div class="question2">
+      <div class="question2 question">
         <h2>Pick your perfect summer date?</h2>
         <div>
-          <input type="radio" name="question2" id="excited1" value="excited">
+          <input type="radio" name="question2" id="excited1" value="excited" >
           <label for="excited1">Outdoor dance party, a few shots</label>
         </div>
         <div>
-          <input type="radio" name="question2" id="happy1" value="happy">
+          <input type="radio" name="question2" id="happy1" value="happy" >
           <label for="happy1">Movie in the park</label>
         </div>
         <div>
-          <input type="radio" name="question2" id="okay1" value="okay">
+          <input type="radio" name="question2" id="okay1" value="okay" >
           <label for="okay1">Dinner and a movie at home</label>
         </div>
         <div>
-          <input type="radio" name="question2" id="sad1" value="sad">
+          <input type="radio" name="question2" id="sad1" value="sad" >
           <label for="sad1">Going to a coffee shop, I like AC</label>
         </div>
         <div>
-          <input type="radio" name="question2" id="verySad1" value="verySad">
+          <input type="radio" name="question2" id="verySad1" value="verySad" >
           <label for="verySad1">What date?</label>
         </div>
-        
-        <input type="submit" value="Next" name="submit1" id="submit1">
+
+        <button>Next Question</button>
+        <!-- <input type="submit" value="Next" name="submit1" id="submit1"> -->
       </div>
       <!-- QUESTION3 -->
-      <div class="question3">
+      <div class="question3 question">
         <h2>What is your dream summer vacation?</h2>
         <div>
-          <input type="radio" name="question3" id="excited2" value="excited">
+          <input type="radio" name="question3" id="excited2" value="excited" >
           <label for="excited2">Buying a one-way flight and living out of a Jansport on 10$/day</label>
         </div>
         <div>
-          <input type="radio" name="question3" id="happy2" value="happy">
+          <input type="radio" name="question3" id="happy2" value="happy" >
           <label for="happy2">Walking around European cobblestone streets</label>
         </div>
         <div>
-          <input type="radio" name="question3" id="okay2" value="okay">
+          <input type="radio" name="question3" id="okay2" value="okay" >
           <label for="okay2">Mountain biking and hiking the Alps</label>
         </div>
         <div>
-          <input type="radio" name="question3" id="sad2" value="sad">
+          <input type="radio" name="question3" id="sad2" value="sad" >
           <label for="sad2">Staying at an all inclusive restort</label>
         </div>
         <div>
-          <input type="radio" name="question3" id="verySad2" value="verySad">
+          <input type="radio" name="question3" id="verySad2" value="verySad" >
           <label for="verySad2">Staycation at home gardening, that’s all I need</label>
         </div>
-        
-        <input type="submit" value="Next" name="submit2" id="submit2">
+
+        <button>Next Question</button>        
+        <!-- <input type="submit" value="Next" name="submit2" id="submit2"> -->
       </div>
       <!-- QUESTION 4 -->
-      <div class="question4">
+      <div class="question4 question">
         <h2>Choose your favourite summertime activity?</h2>
         <div>
-          <input type="radio" name="question4" id="excited3" value="excited">
+          <input type="radio" name="question4" id="excited3" value="excited" >
           <label for="excited3">A game of pick up beach volleyball</label>
         </div>
         <div>
-          <input type="radio" name="question4" id="happy3" value="happy">
+          <input type="radio" name="question4" id="happy3" value="happy" >
           <label for="happy3">Chilling with friends and having drinks in the park</label>
         </div>
         <div>
-          <input type="radio" name="question4" id="okay3" value="okay">
+          <input type="radio" name="question4" id="okay3" value="okay" >
           <label for="okay3">Yoga and brunch</label>
         </div>
         <div>
-          <input type="radio" name="question4" id="sad3" value="sad">
+          <input type="radio" name="question4" id="sad3" value="sad" >
           <label for="sad3">Reading a book by myself</label>
         </div>
         <div>
-          <input type="radio" name="question4" id="verySad3" value="verySad">
+          <input type="radio" name="question4" id="verySad3" value="verySad" >
           <label for="verySad3">Watching Netflix in the comfort of my AC</label>
         </div>
 
-        <input type="submit" value="Next" name="submit3" id="submit3">
+        <button>Next Question</button>
+        <!-- <input type="submit" value="Next" name="submit3" id="submit3"> -->
       </div>     
       <!-- QUESTION 5 -->
-      <div class="question5">
+      <div class="question5 question">
         <h2>Describe your summertime style?</h2>
         <div>
-          <input type="radio" name="question5" id="excited4" value="excited">
+          <input type="radio" name="question5" id="excited4" value="excited" >
           <label for="excited4">Hats and linen only</label>
         </div>
         <div>
-          <input type="radio" name="question5" id="happy4" value="happy">
+          <input type="radio" name="question5" id="happy4" value="happy" >
           <label for="happy4">Floral everything</label>
         </div>
         <div>
-          <input type="radio" name="question5" id="okay4" value="okay">
+          <input type="radio" name="question5" id="okay4" value="okay" >
           <label for="okay4">Birkenstocks and Raybans everyday</label>
         </div>
         <div>
-          <input type="radio" name="question5" id="sad4" value="sad">
+          <input type="radio" name="question5" id="sad4" value="sad" >
           <label for="sad4">Leather jacket, jeans and a tee</label>
         </div>
         <div>
@@ -154,50 +162,52 @@
           <label for="verySad4">I don't care, be happy I'm wearing pants</label>  
         </div>
         
-        <input type="submit" value="Next" name="submit4" id="submit4">
+        <button>Next Question</button>
+        <!-- <input type="submit" value="Next" name="submit4" id="submit4"> -->
       </div>
       <!-- QUESTION 6 -->
-      <div class="question6">
+      <div class="question6 question">
         <h2>Pick your favourite patio drink?</h2>
         <div>
-          <input type="radio" name="question6" id="excited5" value="excited">
-          <label for="excited5">A pitcher of sangria, all for myself!</label>
+          <input type="radio" name="question6" id="excited5" value="excited" >
+          <label for="excited5">A pitcher of sangria, all to myself!</label>
         </div>
         <div>
-          <input type="radio" name="question6" id="happy5" value="happy">
+          <input type="radio" name="question6" id="happy5" value="happy" >
           <label for="happy5">A bottle of Coors light</label>
         </div>
         <div>
-          <input type="radio" name="question6" id="okay5" value="okay">
+          <input type="radio" name="question6" id="okay5" value="okay" >
           <label for="okay5">Iced coffee</label>
         </div>
         <div>
-          <input type="radio" name="question6" id="sad5" value="sad">
+          <input type="radio" name="question6" id="sad5" value="sad" >
           <label for="sad5">Just fresh cold water</label>
         </div>
         <div>
-          <input type="radio" name="question6" id="verySad5" value="verySad">
+          <input type="radio" name="question6" id="verySad5" value="verySad" >
           <label for="verySad5">I hate patio drinks</label>
         </div>
-      
-        <input type="submit" value="Find your song" name="finalSubmit" id="finalSubmit">
+        
+      <input type="submit">      
       </div>
     </form> 
+
     <!-- RESULT WILL PRINT HERE -->
     <section class="result">
     
     </section>
+    <!-- Twitter Icon -->
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="large" data-text="Oh yeah! I'm all ready for summer with my own summertime anthem 🎵 ☀️ 👍">
+    Tweet</a>
 
-    <!-- Twitter Icon to tweet out -->
-
-    
   </main>
   <footer>
     <p>© 2018 Made by Mikaela Scornaienchi</p>
   </footer>
 
   <!-- External JS and Jquery load -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="scripts/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
