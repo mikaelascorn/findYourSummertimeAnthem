@@ -1,102 +1,109 @@
-  let tally = {
-    excited: 0,
-    happy: 0,
-    okay: 0,
-    sad: 0,
-    verySad: 0
-  }
+let tally = {
+  excited: 0,
+  happy: 0,
+  okay: 0,
+  sad: 0,
+  verySad: 0
+}
+console.log(tally);
 
-  const results = {
-    excited: {
-      description: `You love summer and summer loves you! Don’t stop, be yourself!`,
-      song: `<a href="https://www.youtube.com/watch?v=phXRX1p8woY"></a>`
-    },
-    happy: {
-      description: `You are the sun and summertime is your moon! You have everything you need to have fun.`,
-      song: `<a href="https://www.youtube.com/watch?v=ll5ykbAumD4"></a>`
-    },
-    okay: {
-      description: `You need to learn to appreciate everything around you, let this song brighten everyday for you!`,
-      song: `<a href="https://www.youtube.com/watch?v=W_w95cjw40s"></a>`
-    },
-    sad: {
-      description: `Not in love with summer yet? Give it a chance, try something new, you may be surprised`,
-      song: `<a href="https://www.youtube.com/watch?v=XXyReeg_PMs"></a>`
-    },
-    verySad: {
-      description: `Life’s too short! Don’t let your love of winter bring you down, grab a friend, go outside and dance!`,
-      song: `<a href="https://www.youtube.com/watch?v=ZgRnLM9Vi24"></a>`
-    }
+const results = {
+  excited: {
+    description: `You love summer and summer loves you! Don’t stop, be yourself! <iframe width="560" height="315" src="https://www.youtube.com/embed/phXRX1p8woY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+  },
+  happy: {
+    description: `You are the sun and summertime is your moon! You have everything you need to have fun. <iframe width="560" height="315" src="https://www.youtube.com/embed/ll5ykbAumD4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+  },
+  okay: {
+    description: `You need to learn to appreciate everything around you, let this song brighten everyday for you! <iframe width="560" height="315" src="https://www.youtube.com/embed/W_w95cjw40s?start=8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+  },
+  sad: {
+    description: `Not in love with summer yet? Give it a chance, try something new, you may be surprised <iframe width="560" height="315" src="https://www.youtube.com/embed/XXyReeg_PMs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+  },
+  verySad: {
+    description: `Life’s too short! Don’t let your love of winter bring you down, grab a friend, go outside and dance! <iframe width="560" height="315" src="https://www.youtube.com/embed/ZgRnLM9Vi24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`,
   }
+}
 
-    // I may need to store the options in an tally to filter through at the end in case of a tie? 
-  const randomSelectionFromUserChoice = function (array) {
-  const randomMood = Math.floor(Math.random() * array.length);
-  return array[randomMood];
-  }  // put that variable in the bottom to submit your answer
-  
 $(function () {
-// preventDefault on submit
-  $('form').on('submit', function(e) {
+ 
+  $('button').on('click', function(e) {
+    console.log(e);
+    e.stopPropagation();
     e.preventDefault();
-        
+  }); // END OF BUTTON RESET
+
+// PreventDefault on submit
+  $('form').on('submit', function(e) {
+    e.preventDefault();    
+      
     // Gives the user answer to question
-    let question1 = $('input[name=question1]:checked').val();
-    let question2 = $('input[name=question2]:checked').val();
-    let question3 = $('input[name=question3]:checked').val();
-    let question4 = $('input[name=question4]:checked').val();
-    let question5 = $('input[name=question5]:checked').val();
-    let question6 = $('input[name=question6]:checked').val();
-    console.log(question1, question2, question3, question4, question5, question6);
+    question1 = $('input[name=question1]:checked').val();
+    question2 = $('input[name=question2]:checked').val();
+    question3 = $('input[name=question3]:checked').val();
+    question4 = $('input[name=question4]:checked').val();
+    question5 = $('input[name=question5]:checked').val();
+    question6 = $('input[name=question6]:checked').val();
+    // console.log(question1, question2, question3, question4, question5, question6);
 
-    question1 = tally[question1] + 1;
-    question2 = tally[question2] + 1;
-    question3 = tally[question3] + 1;
-    question4 = tally[question4] + 1;
-    question5 = tally[question5] + 1;
-    question6 = tally[question6] + 1;
-    console.log(question1);
+    // for each question, we want the val of the user input value
+    // its in an array because we needed to put it through a for loop and use .length
+    let question = [
+      $('input[name=question1]:checked').val(),
+      $('input[name=question2]:checked').val(),
+      $('input[name=question3]:checked').val(),
+      $('input[name=question4]:checked').val(),
+      $('input[name=question5]:checked').val(),
+      $('input[name=question6]:checked').val(),
+    ]
 
-    // for (let i = 0; i < choice.length; i = i + 1) {
-    //   // console.log(choice[i]);
-    //   const storedChoice = choice[i];
-    //   if (storedChoice.price === price) {
-    //     // console.log('price matches');
-    //     // push results to new array
-    //     finalOptions.push(storedChoice);
-    //     // console.log(finalOptions);
-    //   }
-    // }
+    //this is to loop through the number of questions and updates the tally
+    for (let i = 0; i < question.length; i++) {
+     if (question[i] === 'excited') {    
+        tally.excited++;
+      }    
+     else if (question[i] === 'happy') 
+      {
+        tally.happy++;
+      }
+     else if (question[i] === 'okay') 
+     {
+        tally.okay++;
+     }
+     else if (question[i] === 'sad') {
+        tally.sad++;
+     }
+     else if (question[i] === 'verySad') {
+        tally.verySad++;
+      }
+    }
 
-    // for (var i in question1) {
-    //   question1.push(tally[i]);
-    // }
+    const tallyResults = [];
+    //This will push the results from the object tally into the empty array tallyResults
+    for (let score in tally) {
+      console.log(tally[score]);
+      tallyResults.push([score, tally[score]]);
+      console.log(tallyResults);
+    }
+    
+    // To return the tallyResults in order of highest to lowest
+    tallyResults.sort(function (a, b) {
+      return b[1] - a[1];
+    });
+    console.log(tallyResults);
 
-  // show the user their final result
-  // How to embed youtube???
-  // $('.result').append(); randomMood
+    // this gets the index number of the one with the most selections, the 4th index
+    const finalResult = tallyResults[0];
 
-    // form submit checks the highest tally
+    //console.log(finalResult);
+    const finalFinalResult = finalResult[0];
+    // show results inside of results on html page, just the title of each
+    // $('section').append(${ tallyResults });
+    $('.result').html(`<section class="result">${results[finalFinalResult].description}</section>`);
 
   }); // END OF FORM SUBMIT
 
-  $('button').on('click', function(e){
-    e.preventDefault();
-    
-    $('.introduction').on('click').fadeOut();
-    $('.question1').fadeIn();
-    $('.question2').on('click').fadeOut();
-    $('.question3').fadeIn();
-    console.log(form);
-    console.log(form);
-    console.log('click');
-   
-  }); //PREVENT DEFAULT ON NEXT BUTTON 
-
-  console.log(tally);
-
 }); // END OF DOCUMENT READY FORM SUBMIT
-
 
 
   //  < !--TWITTER WIDGET -->

@@ -133,12 +133,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 form {
-  max-width: 70%;
-  margin: 0 auto;
-  overflow: hidden; }
+  margin: 0 auto; }
   form p,
   form label {
-    max-width: 500px;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     line-height: 1.4rem; }
@@ -146,11 +143,6 @@ form {
 body {
   margin: 0 auto;
   max-width: 80%; }
-
-header h1,
-header p {
-  margin: 0 auto;
-  text-align: center; }
 
 h2,
 h1,

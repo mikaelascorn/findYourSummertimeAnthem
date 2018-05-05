@@ -70,6 +70,18 @@ $(function () {
     }
 
 
+  //go through the tie see if theres a tie and break it
+  // const randomNumber = function (tally) {
+  //   let result = Math.floor(Math.random() * tally);
+  //   return result;
+  // }  
+
+  // const randomSelectionFromTally = function (tally) {
+  //   let answer = randomNumber(tally.length);
+  //   let randomAnswer = results[answer];
+  //   return randomAnswer;
+  // }
+
     // on submit remember users choice and go to the next question
 
     // show the user their final result
@@ -83,4 +95,70 @@ $(function () {
 
 
 // Figure out how to add aProgress bar if theres time
+
+  // ('section').append('randomSelectionFromTally')
+
+  // console.log(tally.happy);
+  // console.log(typeof tally.happy);
+
+  // console.log(tally);
+
+  // $('.button').on('click', function (e) {
+  //   e.preventDefault();
+
+  //   $('.introduction').on(this).fadeOut(500, function() {
+  //     $(this).css({ "display": "block", "visibility": "hidden"});
+  //   });
+  //   $('.question').on(this).fadeIn(500, function () {
+  //     $(this).css({ "display": "block", "visibility": "hidden" });
+  //   });
+  //   // $('.question1').fadeIn();
+
+  //   //   $(this).fadeOut(500, function () {
+  //   //     $(this).css({ "display": "block", "visibility": "hidden" });  // <-- Style Overwrite 
+  //   //   });
+  //   // })​
+
+  // });
+
+  // $('.button').on('click', function(e){
+  //   e.preventDefault();
+
+  //   $('.introduction').on(this).fadeOut();
+  //   $('.question1').fadeIn();
+
+  // }); //PREVENT DEFAULT TO QUESTION 1 
+  // $('.button1').on('click', function (e) {
+  //   e.preventDefault();
+
+  //   $('.question1').on(this).fadeOut();
+  //   $('.question2').fadeIn();
+
+  // }); //PREVENT DEFAULT TO QUESTION 2
+  // $('.button2').on('click', function (e) {
+  //   e.preventDefault();
+
+  //   $('.question2').on(this).fadeOut();
+  //   $('.question3').fadeIn();
+
+  // }); //PREVENT DEFAULT TO QUESTION 3
+  // $('.button3').on('click', function (e) {
+  //   e.preventDefault();
+
+  //   $('.question3').on(this).fadeOut();
+  //   $('.question4').fadeIn();
+
+  // }); //PREVENT DEFAULT TO QUESTION 4
+  // $('.button4').on('click', function (e) {
+  //   e.preventDefault();
+
+  //   $('.question4').on(this).fadeOut();
+  //   $('.question5').fadeIn();
+
+  // }); //PREVENT DEFAULT TO QUESTION 5
+  // $('.button5').on('click', function (e) {
+  //   e.preventDefault();
+  //   $('.question5').on(this).fadeOut();
+  //   $('.question6').fadeIn();
+  // }); 
 
