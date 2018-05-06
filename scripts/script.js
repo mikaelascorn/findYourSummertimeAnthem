@@ -140,23 +140,33 @@ $(function () {
       tallyResults.push([score, tally[score]]);
       console.log(tallyResults);
     }
-    
+
+
+    const winners = [];
+
     // To return the tallyResults in order of highest to lowest
     tallyResults.sort(function (a, b) {
       return b[1] - a[1];
+      if (b[1] === a[1]) {
+        winners.push();
+      }
     });
     console.log(tallyResults);
 
+    console.log(winners);
+    
     // this gets the index number of the one with the most selections, the 4th index
     const finalResult = tallyResults[0];
     console.log(finalResult);
     
     const finalFinalResult = finalResult[0];
+    console.log(finalFinalResult);
+
     // show results inside of results on html page, just the title of each
-    // $('section').append(${ tallyResults });
     $('.result').html(`<section class="result">${results[finalFinalResult].description}</section>`);
 
   }); // END OF FORM SUBMIT
+  
 
 }); // END OF DOCUMENT READY 
 

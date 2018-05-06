@@ -50,9 +50,15 @@ h1 {
   header h1 {
     padding-top: 5px;
     margin-top: 5px;
+    @include fontSize(25);
   }
   h2 {
-    padding: 10px;
+    padding: 5px;
     margin: 0px;
+  }
+}
+@media (max-width: 360px) {
+  body {
+    height: 110vh;
   }
 }

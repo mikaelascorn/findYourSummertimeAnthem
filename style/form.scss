@@ -12,6 +12,9 @@ form {
     line-height: 1.7rem;
     @include fontSize(13);
   }
+  .question {
+    padding-bottom: 15px;
+  }
   button,
   input[type="submit"] {
     margin: 10px auto;
@@ -52,14 +55,18 @@ form {
     position: relative;
     margin-right: 10px;
     margin-bottom: none;
+    transition: all 0.4s ease-in-out;
   }
   label {
     margin-bottom: 5px;
+  }
+  label:hover:before {
+    border: 5px solid grey;
   }
 }
 
 @media (max-width: 480px) {
   form {
-    padding: 10px;
+    padding: 0px 10px;
   }
 }

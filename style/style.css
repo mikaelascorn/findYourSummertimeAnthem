@@ -146,6 +146,8 @@ form {
     line-height: 1.7rem;
     font-size: 13px;
     font-size: 1.3rem; }
+  form .question {
+    padding-bottom: 15px; }
   form button,
   form input[type="submit"] {
     margin: 10px auto;
@@ -184,13 +186,18 @@ form {
     border-radius: 50%;
     position: relative;
     margin-right: 10px;
-    margin-bottom: none; }
+    margin-bottom: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
   form label {
     margin-bottom: 5px; }
+  form label:hover:before {
+    border: 5px solid grey; }
 
 @media (max-width: 480px) {
   form {
-    padding: 10px; } }
+    padding: 0px 10px; } }
 
 .result {
   font-family: 'Montserrat', sans-serif;
@@ -206,8 +213,8 @@ form {
   text-align: left;
   -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 2px;
-  padding: 4px;
+  border-radius: 5px;
+  padding: 1.5px;
   font-size: 9px;
   font-size: 0.9rem;
   font-family: 'Playfair Display', serif;
@@ -216,7 +223,7 @@ form {
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   position: relative;
-  top: -7px;
+  top: -5px;
   margin-left: 25px; }
 
 footer {
@@ -224,13 +231,22 @@ footer {
   font-size: 8px;
   font-size: 0.8rem;
   font-family: 'Montserrat', sans-serif;
-  padding: 5px; }
+  padding: 5px;
+  margin-top: 0px; }
 
 @media (max-width: 480px) {
   iframe {
     width: 320px;
     height: 200px;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .reset {
+    top: -14px; }
+  footer {
+    margin: 0px;
+    padding: 0px; }
+    footer p {
+      margin: 0px;
+      padding: 0px; } }
 
 body {
   margin: 0 auto;
@@ -274,7 +290,13 @@ h1 {
 @media (max-width: 480px) {
   header h1 {
     padding-top: 5px;
-    margin-top: 5px; }
+    margin-top: 5px;
+    font-size: 25px;
+    font-size: 2.5rem; }
   h2 {
-    padding: 10px;
+    padding: 5px;
     margin: 0px; } }
+
+@media (max-width: 360px) {
+  body {
+    height: 110vh; } }
