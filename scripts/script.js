@@ -5,37 +5,91 @@ let tally = {
   sad: 0,
   verySad: 0
 }
-console.log(tally);
 
 const results = {
   excited: {
-    description: `You love summer and summer loves you! Don’t stop, be yourself! <iframe width="560" height="315" src="https://www.youtube.com/embed/phXRX1p8woY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+    description: `<p>You love summer and summer loves you! Don’t stop, do you!</p><iframe width="560" height="315" src="https://www.youtube.com/embed/phXRX1p8woY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
   },
   happy: {
-    description: `You are the sun and summertime is your moon! You have everything you need to have fun. <iframe width="560" height="315" src="https://www.youtube.com/embed/ll5ykbAumD4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+    description: `<p>You are the sun and summertime is your moon! You have everything you need to have fun this summer.</p><iframe width="560" height="315" src="https://www.youtube.com/embed/ll5ykbAumD4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
   },
   okay: {
-    description: `You need to learn to appreciate everything around you, let this song brighten everyday for you! <iframe width="560" height="315" src="https://www.youtube.com/embed/W_w95cjw40s?start=8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+    description: `<p>You need to learn to appreciate everything around you, let this song brighten everyday for you!</p><iframe width="560" height="315" src="https://www.youtube.com/embed/W_w95cjw40s?start=8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
   },
   sad: {
-    description: `Not in love with summer yet? Give it a chance, try something new, you may be surprised <iframe width="560" height="315" src="https://www.youtube.com/embed/XXyReeg_PMs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+    description: `<p>Not in love with summer yet? Give it a chance, try something new, you may be surprised</p><iframe width="560" height="315" src="https://www.youtube.com/embed/XXyReeg_PMs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
   },
   verySad: {
-    description: `Life’s too short! Don’t let your love of winter bring you down, grab a friend, go outside and dance! <iframe width="560" height="315" src="https://www.youtube.com/embed/ZgRnLM9Vi24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`,
+    description: `<p>Life’s too short! Don’t let your love of winter bring you down, grab a friend, go outside and dance!</p><iframe width="560" height="315" src="https://www.youtube.com/embed/ZgRnLM9Vi24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`,
   }
 }
 
 $(function () {
- 
-  $('button').on('click', function(e) {
+
+  $('.question').hide();
+
+  $('.button').on('click', function(e) {
     console.log(e);
     e.stopPropagation();
+    e.preventDefault(); 
+
+    $('.introduction').hide();
+    $('.question1').fadeIn(800);
+  }); // END OF BUTTON RESET
+  
+  $('.button1').on('click', function (e) {
+    e.stopPropagation();
     e.preventDefault();
+
+    $('.question1').hide();
+    $('.question2').fadeIn(800);
+  }); // END OF BUTTON RESET
+ 
+  $('.button2').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    $('.question2').hide();
+    $('.question3').fadeIn(800);
   }); // END OF BUTTON RESET
 
-// PreventDefault on submit
+  $('.button3').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    $('.question3').hide();
+    $('.question4').fadeIn(800);
+  }); // END OF BUTTON RESET
+
+  $('.button4').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    $('.question4').hide();
+    $('.question5').fadeIn(800);
+  }); // END OF BUTTON RESET
+
+  $('.button5').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    $('.question5').hide();
+    $('.question6').fadeIn(800);
+  }); // END OF BUTTON RESET
+
+  $('.reset').on('click', function (e) {
+    e.preventDefault();
+    console.log('reset');
+    window.location.reload(true);
+
+  }); //FORM RESET
+
+  // FORM SUBMIT
   $('form').on('submit', function(e) {
     e.preventDefault();    
+
+    $('.question6').hide();
+    $('section').fadeIn(800);
       
     // Gives the user answer to question
     question1 = $('input[name=question1]:checked').val();
@@ -79,6 +133,7 @@ $(function () {
     }
 
     const tallyResults = [];
+    console.log(tallyResults);
     //This will push the results from the object tally into the empty array tallyResults
     for (let score in tally) {
       console.log(tally[score]);
@@ -94,8 +149,8 @@ $(function () {
 
     // this gets the index number of the one with the most selections, the 4th index
     const finalResult = tallyResults[0];
-
-    //console.log(finalResult);
+    console.log(finalResult);
+    
     const finalFinalResult = finalResult[0];
     // show results inside of results on html page, just the title of each
     // $('section').append(${ tallyResults });
@@ -103,7 +158,7 @@ $(function () {
 
   }); // END OF FORM SUBMIT
 
-}); // END OF DOCUMENT READY FORM SUBMIT
+}); // END OF DOCUMENT READY 
 
 
   //  < !--TWITTER WIDGET -->

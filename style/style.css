@@ -133,22 +133,148 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 form {
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px 70px; }
+  form h2 {
+    font-size: 20px;
+    font-size: 2rem; }
   form p,
   form label {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    line-height: 1.4rem; }
+    line-height: 1.7rem;
+    font-size: 13px;
+    font-size: 1.3rem; }
+  form button,
+  form input[type="submit"] {
+    margin: 10px auto;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 11px;
+    font-size: 1.1rem;
+    font-family: 'Playfair Display', serif;
+    border: transparent;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  form button:hover,
+  form input[type="submit"]:hover {
+    background-color: #9ac5ab; }
+  form .select {
+    padding: 5px;
+    font-size: 11px;
+    font-size: 1.1rem; }
+  form input[type="radio"] {
+    display: none; }
+  form input[type=radio]:checked ~ label {
+    color: #9ac5ab;
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1); }
+  form label:hover {
+    color: grey; }
+  form label::before {
+    display: inline-block;
+    content: "";
+    border: 5px solid #9ac5ab;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: none; }
+  form label {
+    margin-bottom: 5px; }
+
+@media (max-width: 480px) {
+  form {
+    padding: 10px; } }
+
+.result {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem; }
+  .result p {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 15px; }
+
+.reset {
+  margin-bottom: 2px;
+  text-align: left;
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  padding: 4px;
+  font-size: 9px;
+  font-size: 0.9rem;
+  font-family: 'Playfair Display', serif;
+  border: transparent;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  top: -7px;
+  margin-left: 25px; }
+
+footer {
+  text-align: center;
+  font-size: 8px;
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px; }
+
+@media (max-width: 480px) {
+  iframe {
+    width: 320px;
+    height: 200px;
+    margin-bottom: 10px; } }
 
 body {
   margin: 0 auto;
-  max-width: 80%; }
+  background: url(../assets/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: contain;
+  height: 100vh; }
+
+.wrapper {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  margin: 0 auto;
+  max-width: 850px;
+  position: relative;
+  top: 50%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .wrapper a {
+    margin: 40px; }
+
+header h1 {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
 
 h2,
 h1,
 h3 {
   font-family: 'Playfair Display', serif; }
 
-.twitter-share-button {
-  text-align: center;
-  display: inline; }
+h1 {
+  font-size: 30px;
+  font-size: 3rem; }
+
+@media (max-width: 480px) {
+  header h1 {
+    padding-top: 5px;
+    margin-top: 5px; }
+  h2 {
+    padding: 10px;
+    margin: 0px; } }

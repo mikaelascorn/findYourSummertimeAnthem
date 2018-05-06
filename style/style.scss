@@ -1,15 +1,40 @@
+@mixin fontSize($scale) {
+	font-size: $scale * 1px;
+	font-size: ($scale / 10) * 1rem;
+}
+
 @import "setup";
 @import "form";
+@import "result";
 
 body {
   margin: 0 auto;
-  max-width: 80%;
+  background: url(../assets/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: contain;
+  height: 100vh;
+}
+.wrapper {
+  background: rgba(255,255,255,0.8);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  margin: 0 auto;
+  max-width: 850px;
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  a {
+    margin: 40px;
+  }
 }
 header {
-  h1,
-  p {
-    // margin: 0 auto;
-    // text-align: center;
+  h1 {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   }
 }
 h2, 
@@ -17,8 +42,17 @@ h1,
 h3 {
   font-family: 'Playfair Display', serif;
 }
+h1 {
+  @include fontSize(30);
+}
 
-.twitter-share-button {
-  text-align: center;
-  display: inline;
+@media (max-width: 480px) {
+  header h1 {
+    padding-top: 5px;
+    margin-top: 5px;
+  }
+  h2 {
+    padding: 10px;
+    margin: 0px;
+  }
 }

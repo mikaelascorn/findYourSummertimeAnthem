@@ -1,33 +1,65 @@
 form {
-  // max-width: 70%;
   margin: 0 auto;
-  // overflow: hidden;
+  text-align: left;
+  padding: 10px 70px;
+  h2 {
+    @include fontSize(20);
+  }
   p,
   label {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    line-height: 1.4rem;
+    line-height: 1.7rem;
+    @include fontSize(13);
   }
-  // .question {
-  //   height: 300px;
-  // }
-  // .question1 {
-  //   display: none;
-  // }
-  // .question2 {
-  //   display: none;
-  // }
-  // .question3 {
-  //   display: none;
-  // }
-  // .question4 {
-  //   display: none;
-  // }
-  // .question5 {
-  //   display: none;
-  // }
-  // .question6 {
-  //   display: none;
-  // }
+  button,
+  input[type="submit"] {
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    padding: 10px;
+    @include fontSize(11);
+    font-family: 'Playfair Display', serif;
+    border: transparent;
+    transition: all 0.4s ease-in-out;
+  }
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: rgb(154, 197, 171);
+  }
+  .select {
+    padding: 5px;
+    @include fontSize(11);
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type=radio]:checked ~ label {
+    color: rgb(154, 197, 171);
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+  label:hover {
+    color: grey;
+  }
+  label::before {
+    display: inline-block;
+    content: "";
+    border: 5px solid rgb(154, 197, 171);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: none;
+  }
+  label {
+    margin-bottom: 5px;
+  }
 }
 
+@media (max-width: 480px) {
+  form {
+    padding: 10px;
+  }
+}
