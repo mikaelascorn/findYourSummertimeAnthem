@@ -17,7 +17,7 @@ const results = {
     description: `<p>You need to learn to appreciate everything around you, let this song brighten everyday for you!</p><iframe width="560" height="315" src="https://www.youtube.com/embed/W_w95cjw40s?start=8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
   },
   sad: {
-    description: `<p>Not in love with summer yet? Give it a chance, try something new, you may be surprised</p><iframe width="560" height="315" src="https://www.youtube.com/embed/XXyReeg_PMs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
+    description: `<p>Not in love with summer yet? Give it a chance, try something new, you may be surprised.</p><iframe width="560" height="315" src="https://www.youtube.com/embed/XXyReeg_PMs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`
   },
   verySad: {
     description: `<p>Life’s too short! Don’t let your love of winter bring you down, grab a friend, go outside and dance!</p><iframe width="560" height="315" src="https://www.youtube.com/embed/ZgRnLM9Vi24" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`,
