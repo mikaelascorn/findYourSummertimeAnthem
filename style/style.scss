@@ -3,6 +3,9 @@
 	font-size: ($scale / 10) * 1rem;
 }
 
+$grey: #7a7a7a;
+$primary: rgb(154, 197, 171);
+
 @import "setup";
 @import "form";
 @import "result";

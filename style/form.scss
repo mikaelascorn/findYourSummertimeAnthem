@@ -29,7 +29,7 @@ form {
   }
   button:hover,
   input[type="submit"]:hover {
-    background-color: rgb(154, 197, 171);
+    background-color: $primary;
   }
   .select {
     padding: 5px;
@@ -39,29 +39,34 @@ form {
     display: none;
   }
   input[type=radio]:checked ~ label {
-    color: rgb(154, 197, 171);
+    color: $primary;
     text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
   }
   label:hover {
-    color: grey;
+    color: $grey;
   }
   label::before {
     display: inline-block;
     content: "";
-    border: 5px solid rgb(154, 197, 171);
+    border: 5px solid $primary;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     position: relative;
-    margin-right: 10px;
+    margin-right: 15px;
     margin-bottom: none;
     transition: all 0.4s ease-in-out;
+    margin-left: -35px;
+    top: 2px;
   }
   label {
     margin-bottom: 5px;
   }
   label:hover:before {
-    border: 5px solid grey;
+    border: 5px solid $grey;
+  }
+  .question div {
+    margin-left: 32px;
   }
 }
 
