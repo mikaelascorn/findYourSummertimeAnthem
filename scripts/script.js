@@ -41,8 +41,43 @@ $(function () {
     e.stopPropagation();
     e.preventDefault();
 
-    $('.question1').hide();
-    $('.question2').fadeIn(800);
+    // if (loop === false) {
+    //   $('.question1').hide();
+    //   $('.question2').fadeIn(800);
+    // } else {        
+    //   $('.noAnswer').fadeIn(200);              
+    //   }
+
+    // let option = $('input[type="radio"]').prop('checked');
+    // let option = $('input[name=question1]:checked');
+    
+    // // $("input[type=radio][checked]").each( )
+
+    // for (option = 0; option.length; option++) {
+    //   if ( option === false) {
+    //     $('.question1').hide();
+    //     $('.question2').fadeIn(800);
+    //   } else {        
+    //     $('.noAnswer').fadeIn(200);              
+    //   }
+    // }
+
+    // let loop = $('input:checked').attr('checked');
+    //   console.log(loop);
+    // let loop = document.querySelector('input[type="radio"]:checked');
+    
+    console.log(select);
+    let select = $('input[type="radio"]:checked');
+    for (let i = 0; select.length; i++) {
+
+      if (select > 0) {
+        $('.question1').hide();
+        $('.question2').fadeIn(800);
+      } else {        
+        $('.noAnswer').fadeIn(600);              
+      }
+    }
+
   }); // END OF BUTTON RESET
  
   $('.button2').on('click', function (e) {
@@ -90,15 +125,6 @@ $(function () {
 
     $('.question6').hide();
     $('section').fadeIn(800);
-      
-    // Gives the user answer to question
-    question1 = $('input[name=question1]:checked').val();
-    question2 = $('input[name=question2]:checked').val();
-    question3 = $('input[name=question3]:checked').val();
-    question4 = $('input[name=question4]:checked').val();
-    question5 = $('input[name=question5]:checked').val();
-    question6 = $('input[name=question6]:checked').val();
-    // console.log(question1, question2, question3, question4, question5, question6);
 
     // for each question, we want the val of the user input value
     // its in an array because we needed to put it through a for loop and use .length
@@ -113,6 +139,7 @@ $(function () {
 
     //this is to loop through the number of questions and updates the tally
     for (let i = 0; i < question.length; i++) {
+      console.log(question);
      if (question[i] === 'excited') {    
         tally.excited++;
       }    
@@ -141,7 +168,6 @@ $(function () {
       console.log(tallyResults);
     }
 
-
     const winners = [];
 
     // To return the tallyResults in order of highest to lowest
@@ -151,8 +177,10 @@ $(function () {
         winners.push();
       }
     });
-    console.log(tallyResults);
+    const optionToDispaly = randomItem(options);
 
+
+    console.log(tallyResults);
     console.log(winners);
     
     // this gets the index number of the one with the most selections, the 4th index
@@ -162,14 +190,13 @@ $(function () {
     const finalFinalResult = finalResult[0];
     console.log(finalFinalResult);
 
+
     // show results inside of results on html page, just the title of each
     $('.result').html(`<section class="result">${results[finalFinalResult].description}</section>`);
 
   }); // END OF FORM SUBMIT
   
-
 }); // END OF DOCUMENT READY 
-
 
   //  < !--TWITTER WIDGET -->
   window.twttr = (function (d, s, id) {

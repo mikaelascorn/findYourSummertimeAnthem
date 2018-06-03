@@ -5,6 +5,9 @@ form {
   h2 {
     @include fontSize(20);
   }
+  .noAnswer {
+    display: none;
+  }
   p,
   label {
     font-family: 'Montserrat', sans-serif;
@@ -73,5 +76,12 @@ form {
 @media (max-width: 480px) {
   form {
     padding: 0px 10px;
+    h2 {
+      @include fontSize(17);
+      padding: 0px;
+    }
+    .question {
+      padding-bottom: 5px;
+    }
   }
 }

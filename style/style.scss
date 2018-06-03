@@ -16,7 +16,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: contain;
-  overflow: hidden;
   height: 100vh;
 }
 .wrapper {
@@ -26,7 +25,7 @@ body {
   margin: 0 auto;
   max-width: 850px;
   position: relative;
-  top: 47%;
+  top: 50%;
   text-align: center;
   transform: translateY(-50%);
   a {
@@ -64,6 +63,5 @@ h1 {
 @media (max-width: 360px) {
   body {
     height: 110vh;
-    overflow: auto;
   }
 }
