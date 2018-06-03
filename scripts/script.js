@@ -24,9 +24,15 @@ const results = {
   }
 }
 
+const getRandomItemFromArray = function (array) {
+  const randomItem = Math.floor(Math.random() * array.length);
+  return array[randomItem];
+}
+
 $(function () {
 
   $('.question').hide();
+  $('.noAnswer').hide() 
 
   $('.button').on('click', function(e) {
     console.log(e);
@@ -41,41 +47,14 @@ $(function () {
     e.stopPropagation();
     e.preventDefault();
 
-    // if (loop === false) {
-    //   $('.question1').hide();
-    //   $('.question2').fadeIn(800);
-    // } else {        
-    //   $('.noAnswer').fadeIn(200);              
-    //   }
+    const select = $('input[name=question1]:checked').val();
 
-    // let option = $('input[type="radio"]').prop('checked');
-    // let option = $('input[name=question1]:checked');
-    
-    // // $("input[type=radio][checked]").each( )
-
-    // for (option = 0; option.length; option++) {
-    //   if ( option === false) {
-    //     $('.question1').hide();
-    //     $('.question2').fadeIn(800);
-    //   } else {        
-    //     $('.noAnswer').fadeIn(200);              
-    //   }
-    // }
-
-    // let loop = $('input:checked').attr('checked');
-    //   console.log(loop);
-    // let loop = document.querySelector('input[type="radio"]:checked');
-    
-    console.log(select);
-    let select = $('input[type="radio"]:checked');
-    for (let i = 0; select.length; i++) {
-
-      if (select > 0) {
-        $('.question1').hide();
-        $('.question2').fadeIn(800);
-      } else {        
-        $('.noAnswer').fadeIn(600);              
-      }
+    if (select == null) {
+      $('.noAnswer').fadeIn(600) 
+    } else {
+      $('.question1').hide();
+      $('.question2').fadeIn(800);
+      $('.noAnswer').hide() 
     }
 
   }); // END OF BUTTON RESET
@@ -83,33 +62,62 @@ $(function () {
   $('.button2').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
+    
+    const select = $('input[name=question1]:checked').val();
 
-    $('.question2').hide();
-    $('.question3').fadeIn(800);
+    if (select == null) {
+      $('.noAnswer').fadeIn(600)
+    } else {
+      $('.question2').hide();
+      $('.question3').fadeIn(800);
+      $('.noAnswer').hide()
+    }
   }); // END OF BUTTON RESET
 
   $('.button3').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    $('.question3').hide();
-    $('.question4').fadeIn(800);
+    const select = $('input[name=question1]:checked').val();
+
+    if (select == null) {
+      $('.noAnswer').fadeIn(600)
+    } else {
+      $('.question3').hide();
+      $('.question4').fadeIn(800);
+      $('.noAnswer').hide()
+    }
+
   }); // END OF BUTTON RESET
 
   $('.button4').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    $('.question4').hide();
-    $('.question5').fadeIn(800);
+    const select = $('input[name=question1]:checked').val();
+
+    if (select == null) {
+      $('.noAnswer').fadeIn(600)
+    } else {
+      $('.question4').hide();
+      $('.question5').fadeIn(800);
+      $('.noAnswer').hide()
+    }
   }); // END OF BUTTON RESET
 
   $('.button5').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    $('.question5').hide();
-    $('.question6').fadeIn(800);
+    const select = $('input[name=question1]:checked').val();
+
+    if (select == null) {
+      $('.noAnswer').fadeIn(600)
+    } else {
+      $('.question5').hide();
+      $('.question6').fadeIn(800);
+      $('.noAnswer').hide()
+    }
   }); // END OF BUTTON RESET
 
   $('.reset').on('click', function (e) {
