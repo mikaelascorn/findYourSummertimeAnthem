@@ -116,17 +116,15 @@ $(function () {
   $('form').on('submit', function (e) {
     e.preventDefault();
 
-    $('.question6').hide();
-    $('section').fadeIn(800);
+    const select = $('input[name="question5"]:checked').val();
 
-    // Gives the user answer to question
-    question1 = $('input[name=question1]:checked').val();
-    question2 = $('input[name=question2]:checked').val();
-    question3 = $('input[name=question3]:checked').val();
-    question4 = $('input[name=question4]:checked').val();
-    question5 = $('input[name=question5]:checked').val();
-    question6 = $('input[name=question6]:checked').val();
-    // console.log(question1, question2, question3, question4, question5, question6);
+    if (select == null) {
+      $('.noAnswer').fadeIn(600)
+    } else {
+      $('.question6').hide();
+      $('section').fadeIn(800);
+      $('.noAnswer').hide()
+    }
 
     // for each question, we want the val of the user input value
     // its in an array because we needed to put it through a for loop and use .length
