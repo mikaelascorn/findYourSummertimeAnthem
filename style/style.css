@@ -139,9 +139,7 @@ form {
   form h2 {
     font-size: 20px;
     font-size: 2rem; }
-  form .noAnswer1,
-  form .noAnswer2,
-  form .noAnswer3 {
+  form .noAnswer {
     display: none; }
   form p,
   form label {

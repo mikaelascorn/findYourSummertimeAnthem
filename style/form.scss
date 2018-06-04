@@ -5,9 +5,7 @@ form {
   h2 {
     @include fontSize(20);
   }
-  .noAnswer1,
-  .noAnswer2,
-  .noAnswer3 {
+  .noAnswer {
     display: none;
   }
   p,
