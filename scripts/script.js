@@ -54,7 +54,6 @@ $(function () {
   $('.button2').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
-    $('.noAnswer').hide()
 
     const select = $('input[name="question2"]:checked').val();
     if (select == null) {
@@ -112,11 +111,18 @@ $(function () {
     }
   }); // END OF BUTTON RESET
 
+  $('.reset').on('click', function (e) {
+    e.preventDefault();
+    console.log('reset');
+    window.location.reload(true);
+
+  }); //FORM RESET
+
   // FORM SUBMIT
   $('form').on('submit', function (e) {
     e.preventDefault();
 
-    const select = $('input[name="question5"]:checked').val();
+    const select = $('input[name="question6"]:checked').val();
 
     if (select == null) {
       $('.noAnswer').fadeIn(600)
@@ -165,7 +171,6 @@ $(function () {
       console.log(tallyResults);
     }
 
-
     const winners = [];
 
     // To return the tallyResults in order of highest to lowest
@@ -176,7 +181,6 @@ $(function () {
       }
     });
     console.log(tallyResults);
-
     console.log(winners);
 
     // this gets the index number of the one with the most selections, the 4th index

@@ -1,6 +1,6 @@
 .result {
   font-family: 'Montserrat', sans-serif;
-  @include fontSize(16);
+  @include fontSize(27);
   padding-bottom: 10px;
   p {
     max-width: 80%;
@@ -13,8 +13,8 @@
   text-align: left;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  padding: 1.5px;
-  @include fontSize(9);
+  padding: 1.5px 9px;
+  @include fontSize(17);
   font-family: 'Playfair Display', serif;
   border: transparent;
   transition: all 0.4s ease-in-out;
@@ -23,7 +23,7 @@
   margin-left: 15px;
 }
 footer {
-  @include fontSize(8);
+  @include fontSize(10);
   font-family: 'Montserrat', sans-serif;
   padding: 5px;
   margin-top: 0px;
@@ -42,6 +42,9 @@ footer {
   }
   .reset {
     top: -14px;
+  }
+  .result {
+    @include fontSize(20);   
   }
   footer {
     margin: 0px;

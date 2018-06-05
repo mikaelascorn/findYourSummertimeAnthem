@@ -135,21 +135,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 form {
   margin: 0 auto;
   text-align: left;
-  padding: 10px 70px; }
+  padding: 10px 70px 0px; }
   form h2 {
-    font-size: 20px;
-    font-size: 2rem; }
+    font-size: 30px;
+    font-size: 3rem; }
   form .noAnswer {
     display: none;
     color: red;
-    margin: 15px 0px; }
+    margin: 0px 0px; }
+  form .hidden {
+    height: 25px; }
   form p,
   form label {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    line-height: 1.7rem;
-    font-size: 13px;
-    font-size: 1.3rem; }
+    line-height: 1.4em;
+    font-size: 23px;
+    font-size: 2.3rem; }
   form .question {
     padding-bottom: 15px; }
   form button,
@@ -159,9 +161,9 @@ form {
     -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
-    padding: 15px 30px;
-    font-size: 11px;
-    font-size: 1.1rem;
+    padding: 15px 20px;
+    font-size: 21px;
+    font-size: 2.1rem;
     font-family: 'Playfair Display', serif;
     border: transparent;
     -webkit-transition: all 0.4s ease-in-out;
@@ -203,20 +205,27 @@ form {
   form .question div {
     margin-left: 32px; }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   form {
     padding: 0px 10px; }
+    form label:before {
+      top: 5px; }
     form h2 {
+      font-size: 23px;
+      font-size: 2.3rem; }
+    form label {
       font-size: 17px;
-      font-size: 1.7rem;
-      padding: 0px; }
+      font-size: 1.7rem; }
     form .question {
-      padding-bottom: 5px; } }
+      padding-bottom: 5px; }
+    form button {
+      font-size: 18px;
+      font-size: 1.8rem; } }
 
 .result {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 27px;
+  font-size: 2.7rem;
   padding-bottom: 10px; }
   .result p {
     max-width: 80%;
@@ -229,9 +238,9 @@ form {
   -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  padding: 1.5px;
-  font-size: 9px;
-  font-size: 0.9rem;
+  padding: 1.5px 9px;
+  font-size: 17px;
+  font-size: 1.7rem;
   font-family: 'Playfair Display', serif;
   border: transparent;
   -webkit-transition: all 0.4s ease-in-out;
@@ -242,8 +251,8 @@ form {
   margin-left: 15px; }
 
 footer {
-  font-size: 8px;
-  font-size: 0.8rem;
+  font-size: 10px;
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   padding: 5px;
   margin-top: 0px;
@@ -266,12 +275,18 @@ footer {
     margin-bottom: 10px; }
   .reset {
     top: -14px; }
+  .result {
+    font-size: 20px;
+    font-size: 2rem; }
   footer {
     margin: 0px;
     padding: 0px; }
     footer p {
       margin: 0px;
       padding: 0px; } }
+
+html {
+  font-size: 62.5%; }
 
 body {
   margin: 0 auto;
@@ -310,21 +325,34 @@ h3 {
   font-family: 'Playfair Display', serif; }
 
 h1 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 50px;
+  font-size: 5rem; }
 
 @media (max-width: 480px) {
   header h1 {
-    padding-top: 5px;
+    padding: 5px;
     margin-top: 5px;
-    font-size: 25px;
-    font-size: 2.5rem; }
+    font-size: 35px;
+    font-size: 3.5rem; }
   .wrapper {
     padding: 0px; }
   h2 {
-    padding: 5px;
-    margin: 0px; } }
+    padding: 10px 5px;
+    margin: 0px;
+    font-size: 27px;
+    font-size: 2.7rem; } }
 
 @media (max-width: 360px) {
   body {
-    min-height: 150vh; } }
+    height: 110vh; }
+    body header h1 {
+      font-size: 30px;
+      font-size: 3rem; }
+    body header h2 {
+      font-size: 27px;
+      font-size: 2.7rem; }
+    body form p {
+      font-size: 20px;
+      font-size: 2rem; }
+    body form button {
+      padding: 10px 16px; } }

@@ -10,6 +10,9 @@ $primary: rgb(154, 197, 171);
 @import "form";
 @import "result";
 
+html {
+  font-size: 62.5%;
+}
 body {
   margin: 0 auto;
   background: url(../assets/main.jpg);
@@ -17,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-position: contain;
   height: 100vh;
+  // height: auto;
 }
 .wrapper {
   background: rgba(255,255,255,0.8);
@@ -47,25 +51,38 @@ h3 {
   font-family: 'Playfair Display', serif;
 }
 h1 {
-  @include fontSize(30);
+  @include fontSize(50);
 }
 
 @media (max-width: 480px) {
   header h1 {
-    padding-top: 5px;
+    padding: 5px;
     margin-top: 5px;
-    @include fontSize(25);
+    @include fontSize(35);
   }
   .wrapper {
     padding: 0px;
   }
   h2 {
-    padding: 5px;
+    padding: 10px 5px;
     margin: 0px;
+    @include fontSize(27);
   }
 }
 @media (max-width: 360px) {
   body {
-    min-height: 150vh;
+    height: 110vh;
+    header h1 {
+      @include fontSize(30);
+    }
+    header h2 {
+      @include fontSize(27);
+    }
+    form p {
+      @include fontSize(20);
+    }
+    form button {
+      padding: 10px 16px;
+    }
   }
 }

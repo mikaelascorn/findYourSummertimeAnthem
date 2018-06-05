@@ -1,21 +1,25 @@
 form {
   margin: 0 auto;
   text-align: left;
-  padding: 10px 70px;
+  padding: 10px 70px 0px;
   h2 {
-    @include fontSize(20);
+    @include fontSize(30);
   }
   .noAnswer {
     display: none;
     color: red;
-    margin: 15px 0px;
+    margin: 0px 0px;
+  }
+  .hidden {
+    height: 25px;
+    
   }
   p,
   label {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
-    line-height: 1.7rem;
-    @include fontSize(13);
+    line-height: 1.4em;
+    @include fontSize(23);
   }
   .question {
     padding-bottom: 15px;
@@ -26,8 +30,8 @@ form {
     text-align: center;
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
-    padding: 15px 30px;
-    @include fontSize(11);
+    padding: 15px 20px;
+    @include fontSize(21);
     font-family: 'Playfair Display', serif;
     border: transparent;
     transition: all 0.4s ease-in-out;
@@ -75,15 +79,23 @@ form {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   form {
     padding: 0px 10px;
+    label:before {
+      top: 5px;
+    }
     h2 {
-      @include fontSize(17);
-      padding: 0px;
+      @include fontSize(23);
+    }
+    label {
+      @include fontSize(17);      
     }
     .question {
       padding-bottom: 5px;
+    }
+    button {
+      @include fontSize(18);
     }
   }
 }
